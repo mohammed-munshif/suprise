@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Reema 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff4e8d, #ff9ecf);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 15px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(20px);
+      padding: 45px;
+      border-radius: 28px;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+      animation: fadeIn 1.6s ease;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+    }
+
+    .date {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    button {
+      background: #ffffff;
+      color: #ff4e8d;
+      border: none;
+      padding: 15px 36px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 18px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ffe6f1;
+    }
+
+    .message {
+      margin-top: 35px;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      display: none;
+      animation: popUp 1s ease forwards;
+    }
+
+    .scroll-hint {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      animation: bounce 1.8s infinite;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 22px;
+      opacity: 0.7;
+      pointer-events: none;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes popUp {
+      from { transform: scale(0.75); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+      <h1>Since The Day I Proposed 💍</h1>
+      <div class="name">For My Love, <span class="highlight">Reema</span> ❤️</div>
+      <div class="date">21 / 10 / 2025 — The day my heart chose you forever</div>
+
+      <p>Tap below to read what my heart has been holding since that day…</p>
+
+      <button onclick="showMessage()">Open My Heart 💖</button>
+
+      <div class="scroll-hint">⬇ Scroll down slowly ⬇</div>
+
+      <div class="message" id="loveMessage">
+        From the moment I proposed to you on <b>21st October 2025</b>, my beautiful Reema,
+        my life found a new meaning. That day was not just a memory; it became the
+        foundation of my forever with you. Every smile of yours brightens my darkest
+        days, and every word from you feels like home to my soul. Since that moment,
+        my heart beats with a promise — to love you deeply, respect you endlessly,
+        and stand beside you through every joy and every storm. You are my comfort,
+        my strength, my safest place, and my greatest blessing. I may not say it
+        every second, but every breath I take whispers your name. Reema, you are
+        not just the love of my life — you are my present, my future, and the dream
+        I never want to wake up from. I choose you, today, tomorrow, and forever. 💕
+        <br><br>
+        With you, I have learned what true love really means. It is in the small
+        moments, the quiet smiles, the shared dreams, and the unspoken promises.
+        I promise to protect your heart, to celebrate your happiness, and to walk
+        with you hand in hand through every chapter life writes for us. You are
+        my always and my forever, Reema. 💖
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("loveMessage").style.display = "block";
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 7000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
